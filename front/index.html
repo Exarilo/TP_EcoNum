@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Ecologie Numérique</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <h1 class="title">Ecologie Numérique</h1>
+
+    <div class="input-container">
+        <input type="text" id="cityInput" placeholder="Entrez une ville">
+        <button onclick="getWeather()">Rafraichir</button>
+    </div>
+
+    <div id="cardData">
+        <p><strong>Ville :</strong> <span id="city"></span></p>
+        <p><strong>Temperature : </strong> <span id="temperature"></span>&deg;C</p>
+        <p><strong>Vitesse du vent : </strong> <span id="windspeed"></span> m/s</p>
+    </div>
+    <div id="cardData" style="display: flex; align-items: center;">
+        <p><strong>Intensité : </strong></p>&nbsp;
+        <input type="text" id="intensity" placeholder="Entrez l'Intensité">
+    </div>
+    <br>
+    <button onclick="getTempCable()">test</button>
+    <canvas id="tempChart" class="chart" width="400" height="200"></canvas>
+
+
+    <script src="script.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+
+</body>
+</html>

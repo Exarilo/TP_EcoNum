@@ -1,0 +1,64 @@
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f4f4f4;
+  text-align: center;
+  margin: 0;
+  padding: 0;
+}
+.title {
+  background-color: #3498db;
+  color: #fff;
+  padding: 20px;
+  margin: 0;
+}
+
+.input-container {
+  margin-top: 20px; 
+}
+
+h1 {
+  background-color: #3498db;
+  color: #fff;
+  padding: 20px;
+  margin: 0;
+}
+
+#cityInput {
+  padding: 10px;
+}
+
+button {
+  padding: 10px 20px;
+  background-color: #3498db;
+  color: #fff;
+  border: none;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: #2980b9;
+}
+
+#cardData { 
+  background-color: #fff;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  max-width: 500px;
+  margin: 0 auto;
+  padding: 20px;
+  margin-top: 20px;
+  text-align: left;
+}
+
+#weatherData h2 {
+  margin: 0 0 10px;
+}
+
+#weatherData p {
+  margin: 0 0 5px;
+}
+
+.chart {
+  display: block;
+  margin: 0 auto; 
+}
