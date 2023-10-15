@@ -1,10 +1,10 @@
-from flask import render_template
 from flask import Flask
 from flask import request
 from flask import Flask, jsonify
 from numba import jit
 from flask import Flask, request, jsonify
 from flask_cors import CORS
+#from codecarbon import EmissionsTracker
 
 app = Flask(__name__)
 CORS(app)  
@@ -26,15 +26,14 @@ def login():
     tc=y[-1]
 
 
-    tempcable = {
-            'temp-cable': y
-        }
+    tempcable = {'temp-cable': y}
 
     return jsonify(tempcable)
 
-
 @jit(nopython=True)
 def calcul(ws, ta, tp, T, I,dt = 1):
+   # tracker = EmissionsTracker()
+   # tracker.start()
     x=[]
     y=[]
     x.append(0)
@@ -44,7 +43,7 @@ def calcul(ws, ta, tp, T, I,dt = 1):
         if(i%1000 ==0):
             x.append(i)
             y.append(tp)
-    
+   # emissions: float = tracker.stop()
     return x, y
 if __name__ == '__main__':
       app.run(host='0.0.0.0', port=8000)
