@@ -1,7 +1,11 @@
 # TP_EcoNum 
 
 ## Introduction
-Ce projet, nommé TP_EcoNum, est une application visant à prédire la température d'un câble en fonction de la météo et de l'intensité électrique. De plus, il permet de surveiller les émissions de CO2 associées à l'opération. Le projet a été initié en réponse à un défi présenté par notre supérieur, qui cherche à réaliser des économies substantielles tout en contribuant à une approche éco-responsable.
+En tant que responsables de développement logiciel, notre N+2 nous convoque dans son bureau avec un défi intrigant. Il nous expose une situation où d'importantes économies sont en jeu, mais il nous presse de trouver une solution à moindre coût.
+L'objectif est de prédire la température d'un câble en fonction de la météo et de l'intensité, et ce, sur les 30 prochaines minutes.
+ De plus, cette prédiction doit être accessible via une interface web pour les utilisateurs, sans nécessiter d'installation sur leurs machines.
+Un autre défi consiste à permettre à un robot de contrôle d'accéder à ces données., API facile à attaquer - à interroger.
+Enfin, notre application doit également être capable de fournir des informations sur la consommation d'énergie et les émissions de CO2 en fonction du temps. Ce projet promet d'être à la fois techniquement stimulant et économiquement judicieux.
 
 ## Objectif
 L'objectif principal du TP_EcoNum est de créer une solution technologique permettant de :
