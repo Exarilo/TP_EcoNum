@@ -13,7 +13,7 @@ function getWeather() {
       .catch(error => console.log(error));
 }
 
-let chart; // Déclarez une variable pour stocker le graphique
+let chart; 
 
 function createChart(data) {
     if (chart) {
@@ -54,8 +54,14 @@ function createChart(data) {
     });
 }
 
+async function updateCarbon() {
+    const carbonResponse = await fetch('http://127.0.0.1:8000/carbon');
+    const carbonData = await carbonResponse.json();
 
-function getTempCable() {
+    carbonEmissionsValue.textContent = carbonData.carbon_emissions.toString(); 
+}
+
+async function getTempCable() {
     const temperature = document.getElementById('temperature').textContent;
     const windspeed = document.getElementById('windspeed').textContent;
     const intensity = document.getElementById('intensity').value;
@@ -66,6 +72,8 @@ function getTempCable() {
         .then(response => response.json())
         .then(data => {
             createChart(data); 
+            updateCarbon();
         })
         .catch(error => console.log(error));
+    
 }
